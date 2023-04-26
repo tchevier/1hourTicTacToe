@@ -1,0 +1,80 @@
+:root {
+    --gameWidth: 500px;
+    --gameHeight: 500px;
+}
+
+body {
+    background-color: rgb(145, 207, 254);
+}
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 1rem;
+}
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.game {
+    width: var(--gameWidth);
+    height: var(--gameHeight);
+}
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cell {
+    background-color: rgb(233, 233, 233) ;
+    border: 1px solid black;
+    width: calc(var(--gameWidth) / 3);
+    height: calc(var(--gameHeight) / 3);
+
+}
+.restartBtn {
+    margin-top: 2rem;
+    width: 100px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(80, 165, 255);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.x {
+    position: relative;
+}
+
+.x:after {
+    position: absolute;
+    top: 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\2715"; /* use the hex value here... */
+    font-size: 50px; 
+    color: black;
+    line-height: 100px;
+    text-align: center;
+}
+.o {
+    position: relative;
+}
+
+.o:after {
+    position: absolute;
+    top: 2rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "\006F"; /* use the hex value here... */
+    font-size: 50px; 
+    color: black;
+    line-height: 100px;
+    text-align: center;
+}
